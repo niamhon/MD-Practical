@@ -9,7 +9,7 @@ This practical is structured in two main sections. In the first section ```01_MD
 ## Part 1: MD-Fundamentals
 
 ```cd MD-Practical```
-
+![Liquid argon simulation](/01_MD-Fundamentals/argon.jpg)
 
 In this section we will follow in the footsteps of Aneesur Rahman, who ran published the first molecular dynamics computer simulation on liquid argon in 1964 [[1]](#1). Fittingly for this summer school, we will also be modelling the interactions between the Ar atoms with a Lennard Jones potential. The potential is given by:
 
