@@ -122,6 +122,9 @@ md_simulation = MD(n_particles, box_length_lj, temperature_lj, dt_lj, read_posit
 
 
 ## Part 2: LAMMPS electrolyte
+
+![Interfacial electrolyte simulation](https://github.com/niamhon/MD-Practical/blob/main/02_LAMMPS-electrolyte/LAMMPS-simulation/nacl_h2o_c.jpg)
+
 Now you have got to grips with the basics of running an MD simulation, we will now consider a more complex system, which you may be interested in simulating in a research project. While in the last part, you wrote your own MD code from scratch, in practice MD simulations are run using sophisticated codes -- one of which LAMMPS -- we will be using today.
 
 The system we will look at is an electrolyte solution of NaCl in water in contact with graphene. This is an interesting interfacial system
