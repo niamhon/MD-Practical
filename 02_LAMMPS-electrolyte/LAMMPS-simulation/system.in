@@ -13,10 +13,9 @@ kspace_style pppm 1.0e-5
 
 # ----------------- Atom Definition Section -----------------
 
-read_data "system.data"
-read_dump init_nvt.xyz 0 x y z box no format xyz
+read_data "init_nvt.data"
 
-# ----------------- Settings Section -----------------
+# ----------------- Interactions Section -----------------
 
 bond_coeff   1           1000.0  1.0 
 angle_coeff  1         1000.0  109.47
