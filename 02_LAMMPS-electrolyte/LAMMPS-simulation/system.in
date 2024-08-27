@@ -13,8 +13,7 @@ kspace_style pppm 1.0e-5
 
 # ----------------- Atom Definition Section -----------------
 
-read_data "system.data"
-read_dump init_nvt.xyz 0 x y z box no format xyz
+read_data "init_nvt.data"
 
 # ----------------- Settings Section -----------------
 
@@ -29,8 +28,6 @@ pair_coeff 3 3  0.1 2.584 # sodium
 pair_coeff 5 5  0.0565217 3.214 # carbon
 
 # ----------------- Run Section -----------------
-
-write_data init_nvt.data
 
 reset_timestep 0
 variable t equal step
