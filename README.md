@@ -32,7 +32,7 @@ In the first section of the notebook ```Plot Lennard-Jones Potential``` to get u
 
 **Qs:** Can you think of reason(s) why we would use reduced units?
 
-**Qs:** The Lennard-Jones parameters for Xenon are $\sigma = 3.96 \AA{}$ and $\epsilon/k_B = 231.1 K $. To what conditions of Xenon does our simulation of Argon correspond?
+**Qs:** The Lennard-Jones parameters for Xenon are $\sigma = 3.96 Å $ and $\epsilon/k_B = 231.1 K $. To what conditions of Xenon does our simulation of Argon correspond?
 
 
 Running a MD simulation is based on a general series of steps that are repeated:
@@ -127,7 +127,49 @@ md_simulation = MD(n_particles, box_length_lj, temperature_lj, dt_lj, read_posit
 
 Now you have got to grips with the basics of running an MD simulation, we will now consider a more complex system, which you may be interested in simulating in a research project. While in the last part, you wrote your own MD code from scratch, in practice MD simulations are run using sophisticated codes -- one of which LAMMPS -- we will be using today.
 
-The system we will look at is an electrolyte solution of NaCl in water in contact with graphene. This is an interesting interfacial system
+The system we will look at is an electrolyte solution of NaCl in water in contact with graphene. This is an interesting interfacial system with technological relevance for example in desalination membranes.
+
+In the first part of this section we will setup a LAMMPS input file and then submit a simulation on CSD3. 
+
+### Running simulation with LAMMPS
+
+```
+cd 02_LAMMPS-electrolyte/LAMMPS-simulation
+```
+
+You have been provided with a LAMMPS input file with some key information missing. Your first task is to complete the LAMMPS input script ```system.in```, using help from the documentation at: https://docs.lammps.org/Manual.html. You can use whatever text editor you would like to adapt the input files.
+
+The section you should fix is the ```Interactions Section``` as shown:
+
+```
+# ----------------- Interactions Section -----------------
+
+bond_coeff   1           1000.0  1.0 
+angle_coeff  1         1000.0  109.47
+
+pair_coeff   1 1    XXX  YYY 
+pair_coeff   2 2    XXX  YYY 
+
+pair_coeff 4 4  XXX  YYY 
+pair_coeff 3 3  XXX YYY 
+pair_coeff 5 5  XXX YYY
+```
+
+where the Lennard-Jones parameters are missing.
+
+Unlike in the previous part, where we just had one Lennard-Jones $\sigma$ and $\epsilon$ for Argon, now since we have a more complicated system, there are different values of $\sigma$ and $\epsilon$ for the various interactions. 
+
+We are using a rigid model SPC/E for water, whose parameters you can find here: http://www.sklogwiki.org/SklogWiki/index.php/SPC/E_model_of_water, while the Na and Cl parameters can be found here: https://pubs.acs.org/doi/10.1021/ja00131a018
+
+You will have to do a bit more work to get the carbon parameters. This paper: https://pubs.acs.org/doi/10.1021/jp0268112 gives the _C-O_ paramters as $\sigma_{\mathrm{CO}} = 3.190$ Å and $\epsilon_{\mathrm{CO}} = 0.09369002$ kcal/mol. You should use the Lorentz-Berthelot mixing rules: $\epsilon_{ij} = \sqrt{\epsilon_i \epsilon_j}$ and $\sigma_{ij} = \frac{1}{2} (\sigma_i + \sigma_j)$. 
+
+_Hints:_ Make sure the units you use are consistant with the units defined in the input file. Make sure that you map the correct interactions to the correct atom types. You can see how the atom types are labelled in the `init_nvt.data` file.
+
+### Analysing simulation
+
+```cd 02_LAMMPS-electrolyte/analysis```
+
+We are now ready to analyse the trajectory you generated above. You should use the ```trajectory-analysis.ipynb``` Jupyter notebook to run the analysis.
 
 ## References
 <a id="1">[1]</a> 
