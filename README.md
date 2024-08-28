@@ -10,7 +10,7 @@ This practical is structured in two main sections. In the first section ```01_MD
 
 ### MD Simulation of Liquid Argon
 
-![Liquid argon simulation](https://github.com/niamhon/MD-Practical/blob/main/01_MD-Funadamentals/argon.jpg)
+![Liquid argon simulation](https://github.com/niamhon/MD-Practical/blob/main/01_MD-Fundamentals/argon.jpg)
 
 In this section we will follow in the footsteps of Aneesur Rahman, who ran the first molecular dynamics computer simulation on liquid argon 60 years ago in 1964 [[1]](#1). Fittingly for this summer school, we will also be modelling the interactions between the Ar atoms with a Lennard Jones potential. This potential is given by:
 
@@ -123,7 +123,7 @@ md_simulation = MD(n_particles, box_length_lj, temperature_lj, dt_lj, read_posit
 
 ## Part 2: LAMMPS electrolyte
 
-![Interfacial electrolyte simulation](https://github.com/niamhon/MD-Practical/blob/main/02_LAMMPS-electrolyte/LAMMPS-simulation/nacl_h2o_c.jpg)
+![Interfacial electrolyte simulation](https://github.com/niamhon/MD-Practical/blob/main/02_LAMMPS-electrolyte/01_LAMMPS-simulation/nacl_h2o_c.jpg)
 
 Now you have got to grips with the basics of running an MD simulation, we will now consider a more complex system, which you may be interested in simulating in a research project. While in the last part, you wrote your own MD code from scratch, in practice MD simulations are run using sophisticated codes -- one of which LAMMPS -- we will be using today.
 
