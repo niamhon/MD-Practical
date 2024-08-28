@@ -4,6 +4,9 @@ Practical on MD for LJC Summer School
 This practical is structured in two main sections. In the first section ```01_MD-Fundamentals``` you will work on a bare-bones MD code, and implement some of the key functions in order to run an MD simulation. In the second part ```02_LAMMPS-electrolyte```, you will look at a more `real-world' example, where you will set up your own simulation and run it on a HPC, and then analyse the resulting trajectory.
 
 ## Part 0: Setup
+TODO: tell them what directory to be in and to copy lammps outputs to the appropriate folder
+TODO: delete unnecessary files from trajectory folder
+
 ```
 source ~/rds/rds-ljc-summerschool/4_Molecular_dynamics/moldyn/bin/activate
 git clone https://github.com/niamhon/MD-Practical.git
@@ -139,6 +142,7 @@ In the first part of this section we will setup a LAMMPS input file and then sub
 ```
 cd 02_LAMMPS-electrolyte/LAMMPS-simulation
 ```
+#### Setting up the input file
 
 You have been provided with a LAMMPS input file with some key information missing. Your first task is to complete the LAMMPS input script ```system.in```, using help from the documentation at: https://docs.lammps.org/Manual.html. You can use whatever text editor you would like to adapt the input files.
 
@@ -167,6 +171,11 @@ We are using a rigid model SPC/E for water, whose parameters you can find here: 
 You will have to do a bit more work to get the carbon parameters. This paper: https://pubs.acs.org/doi/10.1021/jp0268112 gives the _C-O_ paramters as $\sigma_{\mathrm{CO}} = 3.190$ Å and $\epsilon_{\mathrm{CO}} = 0.09369002$ kcal/mol. You should use the Lorentz-Berthelot mixing rules: $\epsilon_{ij} = \sqrt{\epsilon_i \epsilon_j}$ and $\sigma_{ij} = \frac{1}{2} (\sigma_i + \sigma_j)$. 
 
 _Hints:_ Make sure the units you use are consistant with the units defined in the input file. Make sure that you map the correct interactions to the correct atom types. You can see how the atom types are labelled in the `init_nvt.data` file.
+
+#### Running the simulations
+
+[TODO: Instructions for submitting simulations]
+**Plot the simulation speed (timesteps per second) vs number of cores**
 
 ### Analysing simulation
 
