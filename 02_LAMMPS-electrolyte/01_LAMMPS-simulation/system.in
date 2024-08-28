@@ -29,8 +29,6 @@ pair_coeff 5 5  0.0565217 3.214 # carbon
 
 # ----------------- Run Section -----------------
 
-write_data init_nvt.data
-
 reset_timestep 0
 variable t equal step
 
