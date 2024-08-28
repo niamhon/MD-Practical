@@ -4,6 +4,7 @@ Practical on MD for LJC Summer School
 This practical is structured in two main sections. In the first section ```01_MD-Fundamentals``` you will work on a bare-bones MD code, and implement some of the key functions in order to run an MD simulation. In the second part ```02_LAMMPS-electrolyte```, you will look at a more `real-world' example, where you will set up your own simulation and run it on a HPC, and then analyse the resulting trajectory.
 
 ## Part 0: Setup
+```source ~/rds/rds-ljc-summerschool/4_Molecular_dynamics/moldyn/bin/activate```
 ```git clone https://github.com/niamhon/MD-Practical.git ```
 
 ## Part 1: MD-Fundamentals
