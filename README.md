@@ -29,6 +29,8 @@ In this section we will follow in the footsteps of Aneesur Rahman, who ran the f
 
 We have provided you with a skeleton of the molecular dynamics code in the ```MD.ipynb``` notebook.
 
+```jupyter lab```
+
 Work through the notebook, filling in the required code to run an MD simulation of liquid Argon.
 
 
