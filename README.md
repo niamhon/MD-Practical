@@ -6,8 +6,7 @@ This practical is structured in two main sections. In the first section ```01_MD
 There are solutions notebooks available for both sections of the pracitcal in their respective folders. However we _strongly_ reccommend that you do not look at these until after the practical or if you are desparately stuck. It is better to ask one of us and talk through any problems than simply copying an answer (you may also come up with much more efficient solutions!). 
 
 ## Part 0: Setup
-TODO: tell them what directory to be in and to copy lammps outputs to the appropriate folder
-TODO: delete unnecessary files from trajectory folder
+The practical will be run on CSD3 which you by now are probably familiar with. You should first connect to CSD3 as usual. Then run the following code to download the practical exercises from the Github repository to activate the environment.
 
 ```
 mkdir 4_Molecular_dynamics
