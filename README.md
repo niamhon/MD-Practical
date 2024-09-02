@@ -105,3 +105,8 @@ While the LAMMPS code is much more efficient than our home-made code from Part 1
 <a id="1">[1]</a> 
 A. Rahman
 Phys. Rev. 136, A405 – Published 19 October 1964
+
+## Acknowlegements
+Many of the algorithms here have been inspired by those in:
+
+Frenkel and Smit: Understanding Molecular Simulations: From Algorithms to Applications.
