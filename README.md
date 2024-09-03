@@ -47,7 +47,7 @@ In the first part of this section we will setup a LAMMPS input file and then run
 ### Running simulation with LAMMPS
 
 ```
-cd 02_LAMMPS-electrolyte/LAMMPS-simulation
+cd 02_LAMMPS-electrolyte/01_LAMMPS-simulation
 ```
 #### Setting up the input file
 
