@@ -90,6 +90,8 @@ mpirun -np 1 /rds/project/hpc/rds-hpc-training/rds-ljc-summerschool/shared/4_Mol
 
 You can monitor the output of the simulation in the ```log.lammps``` file. 
 
+**Plot the time per step vs number of cores used in the simulation.**
+
 ### Analysing simulation
 
 ```cd 02_LAMMPS-electrolyte/analysis```
